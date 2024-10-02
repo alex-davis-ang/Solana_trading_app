@@ -4,6 +4,8 @@ import 'package:login_signup_page/Chats_Notification_Profile/NotificationScreen.
 import 'package:login_signup_page/Chats_Notification_Profile/ProfileScreen.dart';
 import 'package:login_signup_page/login_page.dart';
 import 'package:login_signup_page/signUp_page.dart';
+import 'package:login_signup_page/pfedit_page.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> main() async {
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
         ChatScreenPage.id: (context) => const ChatScreenPage(),
         NotificationPage.id: (context) => NotificationPage(),
         ProfilePageScreen.id: (context) => ProfilePageScreen(),
+        PfEditPage.id: (context) => PfEditPage(),
       },
     );
   }

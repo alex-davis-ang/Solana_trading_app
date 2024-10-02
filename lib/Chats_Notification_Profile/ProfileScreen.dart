@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_signup_page/login_page.dart';
+import 'package:login_signup_page/pfedit_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ProfilePageScreen extends StatefulWidget {
@@ -63,24 +64,7 @@ class _ProfilePageScreenState extends State<ProfilePageScreen> {
                   bottom: 0,
                   child: InkWell(
                     onTap: () {
-                      // Action function goes here
-                      showDialog(
-                        context: context,
-                        builder: (context) {
-                          return AlertDialog(
-                            title: Text('Edit Avatar'),
-                            content: Text('Edit button pressed'),
-                            actions: <Widget>[
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                                child: Text('Close'),
-                              ),
-                            ],
-                          );
-                        },
-                      );
+                      Navigator.pushNamed(context, PfEditPage.id);
                     },
                     child: Container(
                       padding: EdgeInsets.all(2),
