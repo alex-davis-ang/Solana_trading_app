@@ -46,13 +46,57 @@ class _ProfilePageScreenState extends State<ProfilePageScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Profile Picture
-            CircleAvatar(
-              radius: 40,
-              backgroundColor: Colors.blueAccent,
-              child: Text(
-                name![0].toUpperCase(),
-                style: const TextStyle(color: Colors.white),
-              ),
+            Stack(
+              children: <Widget>[
+                // CircleAvatar
+                CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.blueAccent,
+                  child: Text(
+                    name![0].toUpperCase(),
+                    style: const TextStyle(color: Colors.white, fontSize: 40),
+                  ),
+                ),
+                // Positioned icon on top of CircleAvatar
+                Positioned(
+                  right: 0,
+                  bottom: 0,
+                  child: InkWell(
+                    onTap: () {
+                      // Action function goes here
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Text('Edit Avatar'),
+                            content: Text('Edit button pressed'),
+                            actions: <Widget>[
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: Text('Close'),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(2),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.edit,
+                        color: Colors.blueAccent,
+                        size: 20,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 16),
 
