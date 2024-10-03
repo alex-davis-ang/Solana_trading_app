@@ -174,7 +174,7 @@ class _PfEditPage extends State<PfEditPage> {
         ),
         child: Container(
           width: double.infinity,
-          height: 480,
+          height: 500,
           margin: const EdgeInsets.symmetric(horizontal: 30),
           decoration: BoxDecoration(
             border: Border.all(color: Colors.white),
