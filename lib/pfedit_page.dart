@@ -328,27 +328,27 @@ class _PfEditPage extends State<PfEditPage> {
                       ),
                     ),
                     const Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Already a member? ",
-                          style: TextStyle(color: Colors.white, fontSize: 16),
-                        ),
-                        MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.pushNamed(context, loginPageScreen.id);
-                            },
-                            child: const Text(
-                              "LOG IN",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.start,
+                    //   children: [
+                    //     const Text(
+                    //       "Already a member? ",
+                    //       style: TextStyle(color: Colors.white, fontSize: 16),
+                    //     ),
+                    //     MouseRegion(
+                    //       cursor: SystemMouseCursors.click,
+                    //       child: GestureDetector(
+                    //         onTap: () {
+                    //           Navigator.pushNamed(context, loginPageScreen.id);
+                    //         },
+                    //         child: const Text(
+                    //           "LOG IN",
+                    //           style: TextStyle(color: Colors.white),
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                     const Spacer(),
                     const Spacer(),
                     SizedBox(
