@@ -192,7 +192,7 @@ class _PfEditPage extends State<PfEditPage> {
                   children: [
                     const Center(
                       child: Text(
-                        "SignUp",
+                        "Update Profile",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
